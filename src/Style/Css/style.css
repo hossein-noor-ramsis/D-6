@@ -2,7 +2,7 @@
 :root {
   --hue: 227;
   --sat: 47%;
-  --primary-color: hsl(var(--hue), var(var(--sat), 52%));
+  --primary-color: hsl(var(--hue), var(--sat), 52%);
   --primary-color-light: hsl(var(--hue), var(--sat), 85%);
   --primary-color-lighten: hsl(var(--hue), var(--sat), 80%);
   --secondary-color: hsl(var(--hue), var(--sat), 53%);
@@ -351,9 +351,13 @@ template {
   text-decoration: none;
 }
 
-.unstyled-links a {
+.unstyled-links li a {
   color: rgb(72, 72, 72);
   text-decoration: none;
+}
+
+.unstyled-links li {
+  list-style-type: none;
 }
 
 .unstyled-button {
@@ -375,14 +379,83 @@ template {
 }
 /* ========== end of function ========== */
 /* ========== start of variable ========== */
+:root {
+  --hue: 227;
+  --sat: 47%;
+  --primary-color: hsl(var(--hue), var(--sat), 52%);
+  --primary-color-light: hsl(var(--hue), var(--sat), 85%);
+  --primary-color-lighten: hsl(var(--hue), var(--sat), 80%);
+  --secondary-color: hsl(var(--hue), var(--sat), 53%);
+  --title-color: hsl(var(--hue), 4%, 15%);
+  --text-color: hsl(var(--hue), 4%, 35%);
+  --text-color-light: hsl(var(--hue), 4%, 65%);
+  --body-color: hsl(var(--hue), 0%, 100%);
+  --container-color: #ffffff;
+}
+
 /* ========== end of variable ========== */
 /* ========== start of header ========== */
+header .navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 2.5rem;
+  position: relative;
+}
+header .logo a {
+  text-decoration: none;
+  color: var(--title-color);
+  font-size: 2rem;
+  font-weight: bold;
+}
+header .menu {
+  position: fixed;
+  top: 4.5rem;
+  left: 0;
+  right: 0;
+  background-color: var(--body-color);
+  border-radius: 2rem;
+  padding: 2.5rem 0rem;
+  margin: 0rem 2rem;
+  width: 90%;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+  transition: 0.4s;
+  transform: translateY(-140%);
+}
+header .menu ul {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+header .menu ul li {
+  padding: 0.5rem 0.5rem;
+}
+header .them-btn {
+  position: absolute;
+  top: -1rem;
+  left: 1rem;
+}
+header .menu-action {
+  transform: translateY(140%);
+}
+header .btn-primary {
+  background-color: var(--primary-color);
+  color: var(--container-color);
+  border-radius: 35%;
+  padding: 0.5rem;
+}
+
 /* ========== end of header ========== */
 /* ========== start of variable ========== */
 :root {
   --hue: 227;
   --sat: 47%;
-  --primary-color: hsl(var(--hue), var(var(--sat), 52%));
+  --primary-color: hsl(var(--hue), var(--sat), 52%);
   --primary-color-light: hsl(var(--hue), var(--sat), 85%);
   --primary-color-lighten: hsl(var(--hue), var(--sat), 80%);
   --secondary-color: hsl(var(--hue), var(--sat), 53%);
