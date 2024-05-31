@@ -1,0 +1,111 @@
+/* ========== start of variable ========== */
+$color-primary: #000000;
+$color-secondary: #ffffff;
+$color-tertiary: #777777;
+$transition: 0.3s ease;
+$radius: 0.5rem;
+$shadow-light: 0 5px 15px rgba(0, 0, 0, 0.1);
+$shadow-dark: 0 5px 15px rgba(0, 0, 0, 0.2);
+/* ========== end of variable ========== */
+/* ========== start of repetitive codes ========== */
+/* === flex type classes === */
+.flex-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-y-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.flex-x-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.flex-wrap {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* === position type classes === */
+.position-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.position-x-center {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+
+.position-y-center {
+    position: absolute;
+    top: 50%;
+    transform: translate(0%, -50%);
+}
+
+/* === style type classes === */
+.m-auto {
+    margin: auto;
+}
+
+.unstyled-link {
+    color: black;
+    text-decoration: none;
+}
+
+.unstyled-links a {
+    color: rgb(72, 72, 72);
+    text-decoration: none;
+}
+
+.unstyled-button {
+    color: black;
+    background-color: white;
+    padding: 1rem 3rem;
+    margin: 0rem;
+    border: none;
+    border-radius: 0.5rem;
+}
+
+/* ========== end of repetitive codes ========== */
+/* ========== start of function ========== */
+@media screen and (max-with: 575px) {
+
+}
+
+@media screen and (min-width: 576px) {
+
+}
+
+@media screen and (min-width: 768px) {
+
+}
+
+@media screen and (min-width: 992px) {
+
+}
+
+@media screen and (min-width: 1200px) {
+
+}
+
+@media screen and (min-width: 1400px) {
+}
+
+@media screen and (min-width: 1536px) {
+    .container-xxl {
+        max-width: 1400px;
+        margin: auto;
+    }
+}
+/* ========== end of function ========== */ 
