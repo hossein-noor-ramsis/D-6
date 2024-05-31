@@ -3,7 +3,7 @@
   --hue: 227;
   --sat: 47%;
 
-  --primary-color: hsl(var(--hue), var(var(--sat), 52%));
+  --primary-color: hsl(var(--hue), var(--sat), 52%);
   --primary-color-light: hsl(var(--hue), var(--sat), 85%);
   --primary-color-lighten: hsl(var(--hue), var(--sat), 80%);
   --secondary-color: hsl(var(--hue), var(--sat), 53%);
@@ -16,12 +16,7 @@
 }
 /* ========== end of variable ========== */
 /* ========== start of base ========== */
-@font-face {
-  font-family: name;
-  src: url(../Font/name.ttf) format(ttf);
-  src: url(../Font/name.eot) format(eot), url(../Font/name.woff) format(woff),
-    url(../Font/name.woff2) format(woff2);
-}
+
 
 html {
   line-height: 1.15; /* 1 */
@@ -30,7 +25,7 @@ html {
 
 body {
   direction: ltr;
-  font-family: name;
+  font-family: cursive;
   display: grid;
   grid-template-rows: repeat(3, auto);
   max-width: 1536px;

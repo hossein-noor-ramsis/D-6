@@ -15,11 +15,6 @@
 
 /* ========== end of variable ========== */
 /* ========== start of base ========== */
-@font-face {
-  font-family: name;
-  src: url(../Font/name.ttf) format(ttf);
-  src: url(../Font/name.eot) format(eot), url(../Font/name.woff) format(woff), url(../Font/name.woff2) format(woff2);
-}
 html {
   line-height: 1.15; /* 1 */
   scroll-behavior: smooth;
@@ -27,7 +22,7 @@ html {
 
 body {
   direction: ltr;
-  font-family: name;
+  font-family: cursive;
   display: grid;
   grid-template-rows: repeat(3, auto);
   max-width: 1536px;
@@ -400,8 +395,14 @@ header .navbar {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  height: 2.5rem;
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  height: 4rem;
+  width: 100%;
+  padding: 0.5rem 0.5rem;
+  background-color: var(--container-color);
 }
 header .logo a {
   text-decoration: none;
@@ -409,45 +410,112 @@ header .logo a {
   font-size: 2rem;
   font-weight: bold;
 }
-header .menu {
-  position: fixed;
-  top: 4.5rem;
-  left: 0;
-  right: 0;
-  background-color: var(--body-color);
-  border-radius: 2rem;
-  padding: 2.5rem 0rem;
-  margin: 0rem 2rem;
-  width: 90%;
-  box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
-  transition: 0.4s;
-  transform: translateY(-140%);
+@media screen and (max-width: 768px) {
+  header .menu {
+    position: fixed;
+    top: 5rem;
+    left: 50%;
+    right: 0;
+    transform: translate(-50%, -25rem);
+    background-color: var(--body-color);
+    border-radius: 2rem;
+    padding: 2.5rem 0rem;
+    width: 92%;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+    transition: 0.4s;
+  }
+  header .menu ul {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+  }
+  header .menu ul li {
+    padding: 0.5rem 0.5rem;
+  }
+  header .menu-button {
+    background-color: transparent;
+    border: none;
+    color: var(--text-color);
+    font-size: 2rem;
+  }
+  header .menu-action {
+    transform: translate(-50%, 0);
+  }
+  header .checkbox-wrapper-54 {
+    /* The switch - the box around the slider */
+    /* The slider */
+  }
+  header .checkbox-wrapper-54 input[type=checkbox] {
+    visibility: hidden;
+    display: none;
+  }
+  header .checkbox-wrapper-54 *, header .checkbox-wrapper-54 ::after, header .checkbox-wrapper-54 ::before {
+    box-sizing: border-box;
+  }
+  header .checkbox-wrapper-54 .switch {
+    --width-of-switch: 3.5em;
+    --height-of-switch: 2em;
+    /* size of sliding icon -- sun and moon */
+    --size-of-icon: 1.4em;
+    /* it is like a inline-padding of switch */
+    --slider-offset: 0.3em;
+    position: relative;
+    width: var(--width-of-switch);
+    height: var(--height-of-switch);
+    display: inline-block;
+  }
+  header .checkbox-wrapper-54 .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #f4f4f5;
+    transition: 0.4s;
+    border-radius: 30px;
+  }
+  header .checkbox-wrapper-54 .slider:before {
+    position: absolute;
+    content: "";
+    height: var(--size-of-icon, 1.4em);
+    width: var(--size-of-icon, 1.4em);
+    border-radius: 20px;
+    left: var(--slider-offset, 0.3em);
+    top: 50%;
+    transform: translateY(-50%);
+    background: linear-gradient(40deg, #ff0080, #ff8c00 70%);
+    transition: 0.4s;
+  }
+  header .checkbox-wrapper-54 input:checked + .slider {
+    background-color: #303136;
+  }
+  header .checkbox-wrapper-54 input:checked + .slider:before {
+    left: calc(100% - (var(--size-of-icon, 1.4em) + var(--slider-offset, 0.3em)));
+    background: #303136;
+    /* change the value of second inset in box-shadow to change the angle and direction of the moon  */
+    box-shadow: inset -3px -2px 5px -2px #8983f7, inset -10px -4px 0 0 #a3dafb;
+  }
+  header .them-btn {
+    position: absolute;
+    top: -1rem;
+    left: 1.5rem;
+  }
 }
-header .menu ul {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 0;
-  margin: 0;
+@media screen and (min-width: 769px) {
+  header .menu ul li {
+    padding: 0.5rem 0.5rem;
+  }
+  header .menu-button {
+    display: none;
+  }
 }
-header .menu ul li {
-  padding: 0.5rem 0.5rem;
-}
-header .them-btn {
-  position: absolute;
-  top: -1rem;
-  left: 1rem;
-}
-header .menu-action {
-  transform: translateY(140%);
-}
-header .btn-primary {
+header .btn {
   background-color: var(--primary-color);
-  color: var(--container-color);
-  border-radius: 35%;
-  padding: 0.5rem;
 }
 
 /* ========== end of header ========== */
@@ -455,7 +523,7 @@ header .btn-primary {
 :root {
   --hue: 227;
   --sat: 47%;
-  --primary-color: hsl(var(--hue), var(--sat), 52%);
+  --primary-color: hsl(var(--hue), var(var(--sat), 52%));
   --primary-color-light: hsl(var(--hue), var(--sat), 85%);
   --primary-color-lighten: hsl(var(--hue), var(--sat), 80%);
   --secondary-color: hsl(var(--hue), var(--sat), 53%);
