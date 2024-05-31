@@ -413,15 +413,17 @@ header .logo a {
   header .menu {
     position: fixed;
     top: 5rem;
-    left: 50%;
-    right: 0;
-    transform: translate(-50%, -25rem);
+    right: 50%;
+    transform: translate(50%, -23rem);
     background-color: var(--body-color);
     border-radius: 2rem;
     padding: 2.5rem 0rem;
-    width: 92%;
+    width: calc(100% - 2rem);
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
     transition: 0.4s;
+  }
+  header .menu-action {
+    transform: translate(50%, 0);
   }
   header .menu ul {
     position: relative;
@@ -440,9 +442,6 @@ header .logo a {
     border: none;
     color: var(--text-color);
     font-size: 2rem;
-  }
-  header .menu-action {
-    transform: translate(-50%, 0);
   }
   header .them-btn {
     position: absolute;
