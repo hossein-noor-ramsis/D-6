@@ -1,11 +1,19 @@
 /* ========== start of variable ========== */
-$color-primary: #000000;
-$color-secondary: #ffffff;
-$color-tertiary: #777777;
-$transition: 0.3s ease;
-$radius: 0.5rem;
-$shadow-light: 0 5px 15px rgba(0, 0, 0, 0.1);
-$shadow-dark: 0 5px 15px rgba(0, 0, 0, 0.2);
+:root {
+  --hue: 227;
+  --sat: 47%;
+
+  --primary-color: hsl(var(--hue), var(var(--sat), 52%));
+  --primary-color-light: hsl(var(--hue), var(--sat), 85%);
+  --primary-color-lighten: hsl(var(--hue), var(--sat), 80%);
+  --secondary-color: hsl(var(--hue), var(--sat), 53%);
+
+  --title-color: hsl(var(--hue), 4%, 15%);
+  --text-color: hsl(var(--hue), 4%, 35%);
+  --text-color-light: hsl(var(--hue), 4%, 65%);
+  --body-color: hsl(var(--hue), 0%, 100%);
+  --container-color: #ffffff;
+}
 /* ========== end of variable ========== */
 /* ========== start of section ========== */
 
