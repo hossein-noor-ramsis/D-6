@@ -21,6 +21,9 @@
 html {
   line-height: 1.15; /* 1 */
   scroll-behavior: smooth;
+  max-width: 1360px;
+  min-width: 320px;
+  margin: auto;
 }
 
 body {
@@ -28,8 +31,6 @@ body {
   font-family: cursive;
   display: grid;
   grid-template-rows: repeat(3, auto);
-  max-width: 1536px;
-  min-width: 320px;
   // box-sizing: border-box;
   // box-sizing: content-box;
 }
@@ -38,6 +39,7 @@ body {
 
 main {
   display: block;
+  padding: 0rem 1rem;
 }
 
 /* =====    

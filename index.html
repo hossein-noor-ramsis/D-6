@@ -13,11 +13,12 @@
     <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="./src/Style/Css/style.css" />
   </head>
-  <body class="container-xxl">
-    <header class="">
+  <body>
+    <header>
       <!-- ==================== navbar ==================== -->
       <nav id="nav" class="navbar">
-        <div class="logo"><a class="navbar-brand ps-2" href="#">Logo</a></div>
+        <div class="logo"><a class="ps-2" href="#">Logo</a></div>
+
         <div id="menu" class="menu">
           <ul class="unstyled-links">
             <li><a class="item" href="#home">Home</a></li>
@@ -25,29 +26,33 @@
             <li><a class="item" href="#services">Services</a></li>
             <li><a class="item" href="#content">Contact With Us</a></li>
 
-            <div class="them-btn checkbox-wrapper-54">
-              <label class="switch">
-                <input class="" type="checkbox">
-                <span class="slider"></span>
-              </label>
-            </div>
+            <li>
+              <div class="them-btn checkbox-wrapper-54">
+                <label class="switch">
+                  <input class="" type="checkbox">
+                  <span class="slider"></span>
+                </label>
+              </div>
+            </li>
           </ul>
         </div>
 
-        <div>
-          <button class="btn btn-primary rounded-pill d-none d-lg-block" type="button">
+        <div class="d-none d-lg-block">
+          <button class="btn btn-primary rounded-pill pe-2" type="button">
             Lorem, ipsum.
           </button>
+        </div>
+
+        <div class="d-md-none">
           <button id="menu-button" class="menu-button" type="button">
             <i class="bi-list"></i>
           </button>
         </div>
       </nav>
     </header>
-    <main id="main" class="px-2">
+    <main id="main" class="">
       <!-- ==================== section ==================== -->
       <section id="home" class="pt-5">
-        <h1>Lorem ipsum dolor sit.</h1>
         <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
       </section>
     </main>

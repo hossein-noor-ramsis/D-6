@@ -18,6 +18,9 @@
 html {
   line-height: 1.15; /* 1 */
   scroll-behavior: smooth;
+  max-width: 1360px;
+  min-width: 320px;
+  margin: auto;
 }
 
 body {
@@ -25,13 +28,12 @@ body {
   font-family: cursive;
   display: grid;
   grid-template-rows: repeat(3, auto);
-  max-width: 1536px;
-  min-width: 320px;
 }
 
 /* ===== Render the `main` element consistently in IE. ===== */
 main {
   display: block;
+  padding: 0rem 1rem;
 }
 
 /* =====    
@@ -391,10 +393,6 @@ template {
 /* ========== end of variable ========== */
 /* ========== start of header ========== */
 header .navbar {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
   position: fixed;
   top: 0;
   left: 50%;
@@ -403,6 +401,7 @@ header .navbar {
   width: 100%;
   padding: 0.5rem 0.5rem;
   background-color: var(--container-color);
+  max-width: 1360px;
 }
 header .logo a {
   text-decoration: none;
@@ -410,7 +409,7 @@ header .logo a {
   font-size: 2rem;
   font-weight: bold;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   header .menu {
     position: fixed;
     top: 5rem;
@@ -445,77 +444,82 @@ header .logo a {
   header .menu-action {
     transform: translate(-50%, 0);
   }
-  header .checkbox-wrapper-54 {
-    /* The switch - the box around the slider */
-    /* The slider */
-  }
-  header .checkbox-wrapper-54 input[type=checkbox] {
-    visibility: hidden;
-    display: none;
-  }
-  header .checkbox-wrapper-54 *, header .checkbox-wrapper-54 ::after, header .checkbox-wrapper-54 ::before {
-    box-sizing: border-box;
-  }
-  header .checkbox-wrapper-54 .switch {
-    --width-of-switch: 3.5em;
-    --height-of-switch: 2em;
-    /* size of sliding icon -- sun and moon */
-    --size-of-icon: 1.4em;
-    /* it is like a inline-padding of switch */
-    --slider-offset: 0.3em;
-    position: relative;
-    width: var(--width-of-switch);
-    height: var(--height-of-switch);
-    display: inline-block;
-  }
-  header .checkbox-wrapper-54 .slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #f4f4f5;
-    transition: 0.4s;
-    border-radius: 30px;
-  }
-  header .checkbox-wrapper-54 .slider:before {
-    position: absolute;
-    content: "";
-    height: var(--size-of-icon, 1.4em);
-    width: var(--size-of-icon, 1.4em);
-    border-radius: 20px;
-    left: var(--slider-offset, 0.3em);
-    top: 50%;
-    transform: translateY(-50%);
-    background: linear-gradient(40deg, #ff0080, #ff8c00 70%);
-    transition: 0.4s;
-  }
-  header .checkbox-wrapper-54 input:checked + .slider {
-    background-color: #303136;
-  }
-  header .checkbox-wrapper-54 input:checked + .slider:before {
-    left: calc(100% - (var(--size-of-icon, 1.4em) + var(--slider-offset, 0.3em)));
-    background: #303136;
-    /* change the value of second inset in box-shadow to change the angle and direction of the moon  */
-    box-shadow: inset -3px -2px 5px -2px #8983f7, inset -10px -4px 0 0 #a3dafb;
-  }
   header .them-btn {
     position: absolute;
     top: -1rem;
     left: 1.5rem;
   }
 }
-@media screen and (min-width: 769px) {
-  header .menu ul li {
-    padding: 0.5rem 0.5rem;
+@media screen and (min-width: 768px) {
+  header .menu ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0rem;
+    margin: 0rem;
   }
-  header .menu-button {
-    display: none;
+  header .menu ul li {
+    padding: 0.5rem 1rem;
   }
 }
 header .btn {
   background-color: var(--primary-color);
+}
+header .checkbox-wrapper-54 {
+  /* The switch - the box around the slider */
+  /* The slider */
+}
+header .checkbox-wrapper-54 input[type=checkbox] {
+  visibility: hidden;
+  display: none;
+}
+header .checkbox-wrapper-54 *, header .checkbox-wrapper-54 ::after, header .checkbox-wrapper-54 ::before {
+  box-sizing: border-box;
+}
+header .checkbox-wrapper-54 .switch {
+  --width-of-switch: 3.5em;
+  --height-of-switch: 2em;
+  /* size of sliding icon -- sun and moon */
+  --size-of-icon: 1.4em;
+  /* it is like a inline-padding of switch */
+  --slider-offset: 0.3em;
+  position: relative;
+  width: var(--width-of-switch);
+  height: var(--height-of-switch);
+  display: inline-block;
+}
+header .checkbox-wrapper-54 .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #f4f4f5;
+  transition: 0.4s;
+  border-radius: 30px;
+}
+header .checkbox-wrapper-54 .slider:before {
+  position: absolute;
+  content: "";
+  height: var(--size-of-icon, 1.4em);
+  width: var(--size-of-icon, 1.4em);
+  border-radius: 20px;
+  left: var(--slider-offset, 0.3em);
+  top: 50%;
+  transform: translateY(-50%);
+  background: linear-gradient(40deg, #ff0080, #ff8c00 70%);
+  transition: 0.4s;
+}
+header .checkbox-wrapper-54 input:checked + .slider {
+  background-color: #303136;
+}
+header .checkbox-wrapper-54 input:checked + .slider:before {
+  left: calc(100% - (var(--size-of-icon, 1.4em) + var(--slider-offset, 0.3em)));
+  background: #303136;
+  /* change the value of second inset in box-shadow to change the angle and direction of the moon  */
+  box-shadow: inset -3px -2px 5px -2px #8983f7, inset -10px -4px 0 0 #a3dafb;
 }
 
 /* ========== end of header ========== */
