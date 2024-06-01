@@ -1,6 +1,6 @@
 <h1>Business Projset</h1>
 <p>
-  I created this project with html, scss, js and bootstrap
+  I created this project with html, scss, js and bootstrap5
 </p>
 
 <p>
