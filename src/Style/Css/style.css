@@ -382,14 +382,14 @@ template {
 
 .btn {
   background-color: var(--primary-color);
-  color: var(--container-color);
+  color: var(--container-color) !important;
   border: 1px solid var(--primary-color);
   padding: 0.7rem 1rem;
 }
 
 .btn:hover {
-  background-color: var(--container-color);
-  color: var(--secondary-color);
+  background-color: white;
+  color: var(--secondary-color) !important;
   border: 1px solid var(--primary-color);
 }
 
@@ -410,6 +410,15 @@ img {
 
 .fs-1::before {
   font-size: 3rem;
+}
+
+a {
+  color: var(--text-color) !important;
+}
+
+body {
+  color: var(--text-color);
+  background-color: var(--body-color);
 }
 
 /* ========== end of repetitive codes ========== */
@@ -454,7 +463,7 @@ header .navbar {
   height: 4.5rem;
   width: 100%;
   padding: 0.5rem 0.5rem;
-  background-color: var(--container-color);
+  background-color: var(--body-color);
   max-width: 1360px;
 }
 header .navbar .logo a {
@@ -469,7 +478,7 @@ header .navbar .logo a {
     top: 5rem;
     right: 50%;
     transform: translate(50%, -23rem);
-    background-color: var(--body-color);
+    background-color: var(--container-color);
     border-radius: 2rem;
     padding: 2.5rem 0rem;
     width: calc(100% - 2rem);
@@ -571,28 +580,37 @@ header .navbar .checkbox-wrapper-54 input:checked + .slider:before {
   /* change the value of second inset in box-shadow to change the angle and direction of the moon  */
   box-shadow: inset -3px -2px 5px -2px #8983f7, inset -10px -4px 0 0 #a3dafb;
 }
+header .navbar .menu ul li:not(.them-item) {
+  position: relative;
+}
+header .navbar .show::after {
+  content: "";
+  background-color: var(--primary-color);
+  position: absolute;
+  bottom: -0.2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 0.35rem;
+  width: 0.35rem;
+  border-radius: 100%;
+}
 
 header .back-up {
   position: fixed;
   bottom: 1.5rem;
   right: 1.5rem;
   z-index: 3;
+  display: none;
 }
 
 /* ========== end of header ========== */
 /* ========== start of variable ========== */
-:root {
-  --hue: 227;
-  --sat: 47%;
-  --primary-color: hsl(var(--hue), var(--sat), 52%);
-  --primary-color-light: hsl(var(--hue), var(--sat), 85%);
-  --primary-color-lighten: hsl(var(--hue), var(--sat), 80%);
-  --secondary-color: hsl(var(--hue), var(--sat), 53%);
-  --title-color: hsl(var(--hue), 4%, 15%);
-  --text-color: hsl(var(--hue), 4%, 35%);
-  --text-color-light: hsl(var(--hue), 4%, 65%);
-  --body-color: hsl(var(--hue), 0%, 100%);
-  --container-color: #ffffff;
+.dark {
+  --primary-color-light: hsl(var(--hue), 8%, 16%);
+  --title-color: hsl(var(--hue), 4%, 95%);
+  --text-color: hsl(var(--hue), 4%, 80%);
+  --body-color: hsl(var(--hue), 8%, 13%);
+  --container-color: hsl(var(--hue), 8%, 16%);
 }
 
 /* ========== end of variable ========== */

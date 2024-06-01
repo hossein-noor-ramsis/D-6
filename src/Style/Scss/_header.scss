@@ -25,7 +25,7 @@ header .navbar {
     height: 4.5rem;
     width: 100%;
     padding: 0.5rem 0.5rem;
-    background-color: var(--container-color);
+    background-color: var(--body-color);
     max-width: 1360px;
   }
 
@@ -42,7 +42,7 @@ header .navbar {
       top: 5rem;
       right: 50%; 
       transform: translate(50%, -23rem);
-      background-color: var(--body-color);
+      background-color: var(--container-color);
       border-radius: 2rem;
       padding: 2.5rem 0rem;
       width: calc(100% - 2rem);
@@ -160,6 +160,22 @@ header .navbar {
       box-shadow: inset -3px -2px 5px -2px #8983f7, inset -10px -4px 0 0 #a3dafb;
     }
   }
+
+  .menu ul li:not(.them-item) {
+    position: relative;
+  }
+
+  .show::after {
+    content: '';
+    background-color: var(--primary-color);
+    position: absolute;
+    bottom: -0.2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 0.35rem;
+    width: 0.35rem;
+    border-radius: 100%;
+  }
 }
 
 header .back-up {
@@ -168,6 +184,7 @@ header .back-up {
     bottom: 1.5rem;
     right: 1.5rem;
     z-index: 3;
+    display: none;
   }
 }
 /* ========== end of header ========== */

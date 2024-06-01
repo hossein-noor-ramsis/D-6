@@ -91,14 +91,14 @@
 
 .btn {
   background-color: var(--primary-color);
-  color: var(--container-color);
+  color: var(--container-color) !important;
   border: 1px solid var(--primary-color);
   padding: 0.7rem 1rem;
 }
 
 .btn:hover {
-  background-color: var(--container-color);
-  color: var(--secondary-color);
+  background-color: white;
+  color: var(--secondary-color) !important;
   border: 1px solid var(--primary-color);
 }
 
@@ -120,6 +120,16 @@ img {
 .fs-1::before {
   font-size: 3rem;
 }
+
+a {
+  color: var(--text-color) !important;
+}
+
+body {
+  color: var(--text-color);
+  background-color: var(--body-color);
+}
+
 /* ========== end of repetitive codes ========== */
 /* ========== start of function ========== */
 @media screen and (max-with: 575px) {
