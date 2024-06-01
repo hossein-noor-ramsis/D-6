@@ -16,13 +16,13 @@
 }
 /* ========== end of variable ========== */
 /* ========== start of header ========== */
-header {
-  .navbar {
+header .navbar {
+  & {
     position: fixed;
     top: 0;
     left: 50%;
     transform: translate(-50%, 0%);
-    height: 4rem;
+    height: 4.5rem;
     width: 100%;
     padding: 0.5rem 0.5rem;
     background-color: var(--container-color);
@@ -32,7 +32,7 @@ header {
   .logo a {
     text-decoration: none;
     color: var(--title-color);
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: bold;
   }
 
@@ -97,10 +97,6 @@ header {
     }
   }
 
-  .btn {
-    background-color: var(--primary-color);
-  }
-
   .checkbox-wrapper-54 {
     & input[type="checkbox"] {
       visibility: hidden;
@@ -163,6 +159,15 @@ header {
       /* change the value of second inset in box-shadow to change the angle and direction of the moon  */
       box-shadow: inset -3px -2px 5px -2px #8983f7, inset -10px -4px 0 0 #a3dafb;
     }
+  }
+}
+
+header .back-up {
+  & {
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    z-index: 3;
   }
 }
 /* ========== end of header ========== */

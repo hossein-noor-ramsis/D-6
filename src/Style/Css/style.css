@@ -291,6 +291,20 @@ template {
 
 /* ========== end of base ========== */
 /* ========== start of variable ========== */
+:root {
+  --hue: 227;
+  --sat: 47%;
+  --primary-color: hsl(var(--hue), var(--sat), 52%);
+  --primary-color-light: hsl(var(--hue), var(--sat), 85%);
+  --primary-color-lighten: hsl(var(--hue), var(--sat), 80%);
+  --secondary-color: hsl(var(--hue), var(--sat), 53%);
+  --title-color: hsl(var(--hue), 4%, 15%);
+  --text-color: hsl(var(--hue), 4%, 35%);
+  --text-color-light: hsl(var(--hue), 4%, 65%);
+  --body-color: hsl(var(--hue), 0%, 100%);
+  --container-color: #ffffff;
+}
+
 /* ========== end of variable ========== */
 /* ========== start of repetitive codes ========== */
 /* === flex type classes === */
@@ -366,8 +380,48 @@ template {
   border-radius: 0.5rem;
 }
 
+.btn {
+  background-color: var(--primary-color);
+  color: var(--container-color);
+  border: 1px solid var(--primary-color);
+  padding: 0.7rem 1rem;
+}
+
+.btn:hover {
+  background-color: var(--container-color);
+  color: var(--secondary-color);
+  border: 1px solid var(--primary-color);
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+img {
+  width: 100%;
+  padding: 2rem;
+  margin: auto;
+}
+
+.h3 {
+  color: var(--primary-color);
+}
+
+.fs-1::before {
+  font-size: 3rem;
+}
+
 /* ========== end of repetitive codes ========== */
 /* ========== start of function ========== */
+@media screen and (min-width: 768px) {
+  .layout {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    gap: 4rem;
+  }
+}
 @media screen and (min-width: 1536px) {
   .container-xxl {
     max-width: 1400px;
@@ -397,20 +451,20 @@ header .navbar {
   top: 0;
   left: 50%;
   transform: translate(-50%, 0%);
-  height: 4rem;
+  height: 4.5rem;
   width: 100%;
   padding: 0.5rem 0.5rem;
   background-color: var(--container-color);
   max-width: 1360px;
 }
-header .logo a {
+header .navbar .logo a {
   text-decoration: none;
   color: var(--title-color);
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: bold;
 }
 @media screen and (max-width: 767px) {
-  header .menu {
+  header .navbar .menu {
     position: fixed;
     top: 5rem;
     right: 50%;
@@ -422,10 +476,10 @@ header .logo a {
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
     transition: 0.4s;
   }
-  header .menu-action {
+  header .navbar .menu-action {
     transform: translate(50%, 0);
   }
-  header .menu ul {
+  header .navbar .menu ul {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -434,23 +488,23 @@ header .logo a {
     padding: 0;
     margin: 0;
   }
-  header .menu ul li {
+  header .navbar .menu ul li {
     padding: 0.5rem 0.5rem;
   }
-  header .menu-button {
+  header .navbar .menu-button {
     background-color: transparent;
     border: none;
     color: var(--text-color);
     font-size: 2rem;
   }
-  header .them-btn {
+  header .navbar .them-btn {
     position: absolute;
     top: -1rem;
     left: 1.5rem;
   }
 }
 @media screen and (min-width: 768px) {
-  header .menu ul {
+  header .navbar .menu ul {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -458,25 +512,22 @@ header .logo a {
     padding: 0rem;
     margin: 0rem;
   }
-  header .menu ul li {
+  header .navbar .menu ul li {
     padding: 0.5rem 1rem;
   }
 }
-header .btn {
-  background-color: var(--primary-color);
-}
-header .checkbox-wrapper-54 {
+header .navbar .checkbox-wrapper-54 {
   /* The switch - the box around the slider */
   /* The slider */
 }
-header .checkbox-wrapper-54 input[type=checkbox] {
+header .navbar .checkbox-wrapper-54 input[type=checkbox] {
   visibility: hidden;
   display: none;
 }
-header .checkbox-wrapper-54 *, header .checkbox-wrapper-54 ::after, header .checkbox-wrapper-54 ::before {
+header .navbar .checkbox-wrapper-54 *, header .navbar .checkbox-wrapper-54 ::after, header .navbar .checkbox-wrapper-54 ::before {
   box-sizing: border-box;
 }
-header .checkbox-wrapper-54 .switch {
+header .navbar .checkbox-wrapper-54 .switch {
   --width-of-switch: 3.5em;
   --height-of-switch: 2em;
   /* size of sliding icon -- sun and moon */
@@ -488,7 +539,7 @@ header .checkbox-wrapper-54 .switch {
   height: var(--height-of-switch);
   display: inline-block;
 }
-header .checkbox-wrapper-54 .slider {
+header .navbar .checkbox-wrapper-54 .slider {
   position: absolute;
   cursor: pointer;
   top: 0;
@@ -499,7 +550,7 @@ header .checkbox-wrapper-54 .slider {
   transition: 0.4s;
   border-radius: 30px;
 }
-header .checkbox-wrapper-54 .slider:before {
+header .navbar .checkbox-wrapper-54 .slider:before {
   position: absolute;
   content: "";
   height: var(--size-of-icon, 1.4em);
@@ -511,14 +562,21 @@ header .checkbox-wrapper-54 .slider:before {
   background: linear-gradient(40deg, #ff0080, #ff8c00 70%);
   transition: 0.4s;
 }
-header .checkbox-wrapper-54 input:checked + .slider {
+header .navbar .checkbox-wrapper-54 input:checked + .slider {
   background-color: #303136;
 }
-header .checkbox-wrapper-54 input:checked + .slider:before {
+header .navbar .checkbox-wrapper-54 input:checked + .slider:before {
   left: calc(100% - (var(--size-of-icon, 1.4em) + var(--slider-offset, 0.3em)));
   background: #303136;
   /* change the value of second inset in box-shadow to change the angle and direction of the moon  */
   box-shadow: inset -3px -2px 5px -2px #8983f7, inset -10px -4px 0 0 #a3dafb;
+}
+
+header .back-up {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 3;
 }
 
 /* ========== end of header ========== */
@@ -526,7 +584,7 @@ header .checkbox-wrapper-54 input:checked + .slider:before {
 :root {
   --hue: 227;
   --sat: 47%;
-  --primary-color: hsl(var(--hue), var(var(--sat), 52%));
+  --primary-color: hsl(var(--hue), var(--sat), 52%);
   --primary-color-light: hsl(var(--hue), var(--sat), 85%);
   --primary-color-lighten: hsl(var(--hue), var(--sat), 80%);
   --secondary-color: hsl(var(--hue), var(--sat), 53%);
@@ -541,6 +599,25 @@ header .checkbox-wrapper-54 input:checked + .slider:before {
 /* ========== start of section ========== */
 /* ========== end of section ========== */
 /* ========== start of variable ========== */
+:root {
+  --hue: 227;
+  --sat: 47%;
+  --primary-color: hsl(var(--hue), var(--sat), 52%);
+  --primary-color-light: hsl(var(--hue), var(--sat), 85%);
+  --primary-color-lighten: hsl(var(--hue), var(--sat), 80%);
+  --secondary-color: hsl(var(--hue), var(--sat), 53%);
+  --title-color: hsl(var(--hue), 4%, 15%);
+  --text-color: hsl(var(--hue), 4%, 35%);
+  --text-color-light: hsl(var(--hue), 4%, 65%);
+  --body-color: hsl(var(--hue), 0%, 100%);
+  --container-color: #ffffff;
+}
+
 /* ========== end of variable ========== */
 /* ========== start of footer ========== */
+footer {
+  background-color: var(--primary-color-light);
+  padding: 0rem 1rem;
+}
+
 /* ========== end of footer  ========== *//*# sourceMappingURL=style.css.map */

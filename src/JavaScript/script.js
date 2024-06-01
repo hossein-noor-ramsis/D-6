@@ -29,3 +29,6 @@ function addNavShadow() {
   }
 }
 window.addEventListener("scroll", addNavShadow)
+
+// them js function
+
