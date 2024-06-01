@@ -34,7 +34,7 @@ function addNavShadow() {
     nav.classList.remove("shadow-sm");
   }
 }
-window.addEventListener("scroll", addNavShadow)
+window.addEventListener("scroll", addNavShadow);
 
 function addBackUpBtn() {
   if (window.scrollY > 1000) {
@@ -43,20 +43,35 @@ function addBackUpBtn() {
     backUp.style.display = "none";
   }
 }
-window.addEventListener("scroll", addBackUpBtn)
+window.addEventListener("scroll", addBackUpBtn);
 
-home.addEventListener("scroll", function() {
+home.addEventListener("scroll", function () {
   if (window.scrollY > 0) {
-    homeLink.classList.add("show")
+    homeLink.classList.add("show");
   }
-})
+});
 // them js function
-function changeTheme() {
-  console.log(8)
-  if (document.body.classList.contains("dark")) {
-    document.body.classList.remove("dark");
+function checkThem() {
+  if (localStorage?.getItem("savedThem") === undefined) {
+    localStorage.setItem("savedThem", "");
+  }
+
+  if (localStorage.getItem("savedThem") === "dark") {
+    changeThem();
+    themBtn.setAttribute("checked", "checked");
   } else {
-    document.body.classList.add("dark");
+    themBtn.removeAttribute("checked", "checked");
   }
 }
-themBtn.addEventListener("click", changeTheme)
+checkThem();
+
+function changeThem() {
+  if (document.body.classList.contains("dark")) {
+    document.body.classList.remove("dark");
+    localStorage.setItem("savedThem", "light");
+  } else {
+    document.body.classList.add("dark");
+    localStorage.setItem("savedThem", "dark");
+  }
+}
+themBtn.addEventListener("click", changeThem);
