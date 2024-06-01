@@ -465,6 +465,7 @@ header .navbar {
   padding: 0.5rem 0.5rem;
   background-color: var(--body-color);
   max-width: 1360px;
+  z-index: 100;
 }
 header .navbar .logo a {
   text-decoration: none;
