@@ -605,6 +605,11 @@ header .back-up {
   display: none;
 }
 
+header #back-up {
+  background-color: var(--primary-color);
+  color: var(--container-color) !important;
+}
+
 /* ========== end of header ========== */
 /* ========== start of variable ========== */
 .dark {
