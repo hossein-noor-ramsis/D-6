@@ -41,7 +41,7 @@ header .navbar {
     .menu {
       position: fixed;
       top: 5rem;
-      right: 50%; 
+      right: 50%;
       transform: translate(50%, -23rem);
       background-color: var(--container-color);
       border-radius: 2rem;
@@ -167,10 +167,10 @@ header .navbar {
   }
 
   .show::after {
-    content: '';
+    content: "";
     background-color: var(--primary-color);
     position: absolute;
-    bottom: -0.2rem;
+    bottom: -0.1rem;
     left: 50%;
     transform: translateX(-50%);
     height: 0.35rem;

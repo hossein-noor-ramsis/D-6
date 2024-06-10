@@ -295,7 +295,7 @@ template {
 :root {
   --hue: 227;
   --sat: 47%;
-  --primary-color: hsl(var(--hue), var(--sat), 52%);
+  --primary-color: hsl(var(--hue), var(--sat), 55%);
   --primary-color-light: hsl(var(--hue), var(--sat), 85%);
   --primary-color-lighten: hsl(var(--hue), var(--sat), 80%);
   --secondary-color: hsl(var(--hue), var(--sat), 53%);
@@ -589,7 +589,7 @@ header .navbar .show::after {
   content: "";
   background-color: var(--primary-color);
   position: absolute;
-  bottom: -0.2rem;
+  bottom: -0.1rem;
   left: 50%;
   transform: translateX(-50%);
   height: 0.35rem;
@@ -613,11 +613,11 @@ header #back-up {
 /* ========== end of header ========== */
 /* ========== start of variable ========== */
 .dark {
-  --primary-color-light: hsl(var(--hue), 8%, 16%);
+  --primary-color-light: hsl(var(--hue), 10%, 10%);
   --title-color: hsl(var(--hue), 4%, 95%);
   --text-color: hsl(var(--hue), 4%, 90%);
-  --body-color: hsl(var(--hue), 8%, 13%);
-  --container-color: hsl(var(--hue), 8%, 16%);
+  --body-color: hsl(var(--hue), 8%, 15%);
+  --container-color: hsl(var(--hue), 10%, 10%);
 }
 
 /* ========== end of variable ========== */
@@ -627,7 +627,7 @@ header #back-up {
 :root {
   --hue: 227;
   --sat: 47%;
-  --primary-color: hsl(var(--hue), var(--sat), 52%);
+  --primary-color: hsl(var(--hue), var(--sat), 55%);
   --primary-color-light: hsl(var(--hue), var(--sat), 85%);
   --primary-color-lighten: hsl(var(--hue), var(--sat), 80%);
   --secondary-color: hsl(var(--hue), var(--sat), 53%);
