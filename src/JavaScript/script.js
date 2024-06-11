@@ -129,7 +129,3 @@ window.addEventListener("scroll", function () {
     contactItem.classList.add("show");
   }
 });
-
-console.log(homeToServices);
-console.log(window.scrollY);
-console.log(supportSection.scrollHeight);
