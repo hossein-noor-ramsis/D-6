@@ -129,3 +129,5 @@ window.addEventListener("scroll", function () {
     contactItem.classList.add("show");
   }
 });
+
+homeItem.boxElemStyles
